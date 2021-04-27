@@ -8,7 +8,7 @@ class Book(models.Model):
 
    author = fields.Char(string='Author', required=True)
    editor = fields.Char(string='Editor', required=True)
-   isbn = fields.char(string='ISBN', required=False)
+   isbn = fields.Char(string='ISBN', required=False)
    year = fields.integer()
    genre = fields.Selection(string='Genre',
                               selection=[
