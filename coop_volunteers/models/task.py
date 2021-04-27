@@ -9,5 +9,6 @@ class Book(models.Model):
    name = fields.Char(string='Task Name', required=True)
    description = fields.Text(string='Editor', required=False)
    start_time = fields.Date()
+   end_time = fields.Date()
    
 
