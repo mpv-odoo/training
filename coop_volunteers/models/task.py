@@ -3,13 +3,13 @@
 from odoo import models, fields, api
 
 class Book(models.Model):
-   _name='library.book'
-   _description='Book Model'
+   _name='coop.task'
+   _description='Task Model'
 
    author = fields.Char(string='Author', required=True)
    editor = fields.Char(string='Editor', required=True)
    isbn = fields.Char(string='ISBN', required=False)
-   year = fields.Integer()
+   year = fields.integer()
    genre = fields.Selection(string='Genre',
                               selection=[
                                  ('fantasy', 'Fantasy'),
