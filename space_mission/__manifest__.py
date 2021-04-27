@@ -3,11 +3,9 @@
     'name': 'Space Mission',
     'summary': """Academy app to manage training""",
     'description': """
-        Academy Module to manage Training:
-        - Courses
-        - Sessions
-        - Attendees
-        """,
+         Space Ship module to keep track of all 
+         current space ships
+      """,
     'author': 'Odoo',
     'website': 'https://www.odoo.com',
     'category': 'Training',

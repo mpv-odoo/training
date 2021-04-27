@@ -8,4 +8,4 @@ class Ship(models.Model):
 
    model = fields.Char(string='Model', required=True)
    capacity = fields.Integer()
-   msrp = fields.Monetary()
+   active = fields.Boolean(string='Active', default=True)
