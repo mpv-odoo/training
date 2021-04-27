@@ -6,4 +6,6 @@ class Ship(models.Model):
    _name='space.ship'
    _description='Space ship for space missions'
 
-   
+   model = fields.Char(string='Model', required=True)
+   capacity = fields.Integer()
+   msrp = fields.Monetary()
