@@ -21,17 +21,17 @@
             </form>
          </field>
       </record>
-      <record model="ir.ui.view" id="ship_view_list">
+      <!-- <record model="ir.ui.view" id="ship_view_list">
          <field name="name">space.ship.list</field>
          <field name="model">space.ship</field>
          <field name="arch" type="xml">
             <tree string="Spaceship List">
-                  <field name="alias"/>
-                  <field name="model"/>
-                  <field name="capacity"/>
-                  <field name="active"/>
+               <field name="alias"/>
+               <field name="model"/>
+               <field name="capacity"/>
+               <field name="active"/>
             </tree>
          </field>
-      </record>
+      </record> -->
    </data>
 </odoo>
