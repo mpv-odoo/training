@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
    <data>
-      <!-- <record model="ir.ui.view" id="ship_view_form">
+      <record model="ir.ui.view" id="ship_view_form">
          <field name="name">space.ship.form</field>
          <field name="model">space.ship</field>
-         <field name="arch">
+         <field name="arch" type="xml">
             <form string="Ship Form">
                <sheet>
                   <h1><field name="model"/></h1>
@@ -20,7 +20,7 @@
                </sheet>
             </form>
          </field>
-      </record> -->
+      </record>
       <record model="ir.ui.view" id="ship_view_list">
          <field name="name">space.ship.list</field>
          <field name="model">space.ship</field>
