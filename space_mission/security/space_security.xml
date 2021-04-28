@@ -9,5 +9,4 @@
    <record id="group_space_user" model="res.groups">
       <field name="name">Space User</field>
    </record>
-
 </odoo>
