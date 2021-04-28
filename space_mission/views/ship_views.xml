@@ -3,7 +3,7 @@
    <data>
       <record model="ir.ui.view" id="ship_view_form">
          <field name="name">space.ship.form</field>
-         <field name="model">space.ship</field>
+         <!-- <field name="model">space.ship</field>
          <field name="arch">
             <form string="Ship Form">
                <sheet>
@@ -19,7 +19,7 @@
                   </group>
                </sheet>
             </form>
-         </field>
+         </field> -->
       </record>
       <!-- <record model="ir.ui.view" id="ship_view_list">
          <field name="name">space.ship.list</field>
