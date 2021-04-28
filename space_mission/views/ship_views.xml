@@ -17,7 +17,7 @@
                         <field name="fuel"/>
                         <field name="length"/>
                         <field name="width"/>
-                        <field name="size"/>
+                        <field name="size" force_save="1"/>
                         <field name="capacity"/>
                         <field name="alias"/>
                      </group>
