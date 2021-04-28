@@ -2,7 +2,7 @@
 <odoo>
    <data>
       <record model="ir.actions.act_window" id="ships_list_action">
-         <field name="name">Ships</fields>
+         <field name="name">Ships</field>
          <field name="res_model">space.ship</field>
          <field name="view_mode">tree,form</field>
          <field name="help" type="html">
