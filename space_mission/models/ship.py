@@ -26,18 +26,18 @@ class Ship(models.Model):
    active = fields.Boolean(string='Active', default=True)
 
 
-   @api.onchange('capacity')
-   def _onchange_capacity(self):
-      if self.capacity < 0:
-         raise UserError('Capacity of a ship cannot be negative!')
-
-
-   @api.constrains('length', 'width')
-   def _recalc_size(self):
+   @api.constrains('capacity')
+   def _check_capacity(self):
       for ship in self:
-         if ship.length * ship.width < 85000:
-            ship.size = 'small'
-         elif ship.length * ship.width < 115000:
-            ship.size = 'medium'
+         if ship.capacity < 0:
+            raise UserError('Capacity of a ship cannot be negative!')
+
+
+   @api.onchange('length', 'width')
+   def _recalc_size(self):
+         if self.length * self.width < 85000:
+            self.size = 'small'
+         elif self.length * self.width < 115000:
+            self.size = 'medium'
          else:
-            ship.size = 'large'
+            self.size = 'large'
