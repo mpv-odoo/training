@@ -15,7 +15,9 @@ class Ship(models.Model):
       ('fusion', 'Fusion'),
       ('diesel', 'Diesel')
    ])
-
-
-
+   size = fields.Selection(string='Size', selection=[
+      ('small', 'Small'),
+      ('medium', 'Medium'),
+      ('Large', 'Large')
+   ])
    active = fields.Boolean(string='Active', default=True)
