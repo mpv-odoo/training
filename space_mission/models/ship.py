@@ -19,7 +19,7 @@ class Ship(models.Model):
    size = fields.Selection(string='Size', selection=[
       ('small', 'Small'),
       ('medium', 'Medium'),
-      ('Large', 'Large')
+      ('large', 'Large')
       ], readonly=True)
    length = fields.Float(string="Ship Length in cm", required=False)
    width = fields.Float(string="Ship Width in cm", required=False)
