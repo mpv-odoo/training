@@ -3,12 +3,23 @@
    <data noupdate="1">
       <record model="space.ship" id="ship_enterprise">
          <field name="model">Starship Enterprise</field>
-         <field name="capacity">100</field>
+         <field name="capacity">1000</field>
          <field name="fuel_type">fusion</field>
          <field name="max_range">100</field>
          <field name="num_engines">2</field>
          <field name="length">725</field>
          <field name="width">300</field>
+      </record>
+   </data>
+      <data noupdate="1">
+      <record model="space.ship" id="ship_millenium_falcon">
+         <field name="model">Millenium Falcon</field>
+         <field name="capacity">40</field>
+         <field name="fuel_type">hydrogen</field>
+         <field name="max_range">10</field>
+         <field name="num_engines">4</field>
+         <field name="length">34</field>
+         <field name="width">30</field>
       </record>
    </data>
 </odoo>
