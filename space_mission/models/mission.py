@@ -10,7 +10,7 @@ class Mission(models.Model):
    name = fields.Char(string='Mission Name', required=True)
    description = fields.Text(string='Description')
    
-   fuel_required = fields.Int(string='Fuel Required')
+   fuel_required = fields.Integer(string='Fuel Required')
 
    ship_id = fields.Many2one(comodel_name='space.ship',
                              string='Space Ship',
