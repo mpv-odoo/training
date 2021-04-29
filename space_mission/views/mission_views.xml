@@ -13,9 +13,10 @@
                      <field name="fuel_required"/>
                   </group>
                   <group>
+                     <field name="ship_id"/>
                      <field name="captain_id"/>
                      <field name="crew_ids"/>
-                     <field name="ship_id"/>
+                     <field name="crew_size"/>
                   </group>
                </sheet>
             </form>

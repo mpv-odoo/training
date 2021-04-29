@@ -29,7 +29,7 @@ class Mission(models.Model):
       comodel_name='res.partner',
       string='Crew Members'
    )
-   crew_size = fields.
+   crew_size = fields.Integer(compute='_calc_crew_size')
    '''
       When fuel_required gets updated,
       update the domain rule for ship_id
@@ -38,12 +38,16 @@ class Mission(models.Model):
    '''
    @api.onchange('fuel_required')
    def filter_ships_by_fuel_cap(self):
-
-      return {
-         'domain': {
-            'ship_id': [
-               ('fuel_capacity', '>=', self.fuel_required)
-            ]
+      for rec in self:
+         return {
+            'domain': {
+               'ship_id': [
+                  ('fuel_capacity', '>=', rec.fuel_required)
+               ]
+            }
          }
-      }
 
+   @api.depends('crew_ids')
+   def _calc_crew_size(self):
+      for mission in self:
+         mission.crew_size = len(mission.crew_ids)
