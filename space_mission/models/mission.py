@@ -34,3 +34,13 @@ class Mission(models.Model):
    # @api.onchange('fuel_required')
    # def filter_ships_by_min_fuel(self):
    #    return self.fuel_required
+   @api.onchange('fuel_required')
+   def filter_ships_by_fuel_cap(self):
+      for rec in self:
+         return {
+            'domain': {
+               'fuel_capacity': [
+                  ('fuel_required', '>=', rec.fuel_required)
+               ]
+            }
+         }
