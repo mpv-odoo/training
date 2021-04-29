@@ -29,17 +29,21 @@ class Mission(models.Model):
       comodel_name='res.partner',
       string='Crew Members'
    )
-
-   # @api.onchange('fuel_required')
-   # def filter_ships_by_min_fuel(self):
-   #    return self.fuel_required
+   crew_size = fields.
+   '''
+      When fuel_required gets updated,
+      update the domain rule for ship_id
+      to only show ships that would be 
+      able to make the trip
+   '''
    @api.onchange('fuel_required')
    def filter_ships_by_fuel_cap(self):
-      for rec in self:
-         return {
-            'domain': {
-               'ship_id': [
-                  ('fuel_capacity', '>=', rec.fuel_required)
-               ]
-            }
+
+      return {
+         'domain': {
+            'ship_id': [
+               ('fuel_capacity', '>=', self.fuel_required)
+            ]
          }
+      }
+
