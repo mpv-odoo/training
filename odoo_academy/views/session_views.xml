@@ -21,7 +21,6 @@
                      <notebook>
                         <page string="Students">
                            <field name="student_ids"/>
-
                         </page>
                      </notebook>
                   </group>

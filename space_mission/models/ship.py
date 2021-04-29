@@ -10,12 +10,17 @@ class Ship(models.Model):
    model = fields.Char(string='Model', required=True)
    alias = fields.Char(string='Alias', required=True)
    capacity = fields.Integer()
+   
    fuel = fields.Selection(string='Fuel Type', selection=[
       ('electric', 'Electric'),
       ('hydrogen', 'Hydrogen'),
       ('fusion', 'Fusion'),
       ('diesel', 'Diesel')
    ])
+   fuel_capacity = fields.Float(string='Fuel Tank Capacity in Liters', required=True)
+   num_engines = fields.Int(string='Number of Engines', default=1)
+
+
    size = fields.Selection(string='Size', selection=[
       ('small', 'Small'),
       ('medium', 'Medium'),

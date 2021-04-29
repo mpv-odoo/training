@@ -9,7 +9,18 @@ class Mission(models.Model):
 
    name = fields.Char(string='Mission Name', required=True)
    description = fields.Text(string='Description')
+   
+   fuel_required = fields.Int(string='Fuel Required')
 
-   ship_id = fields.Many2one(comodel_name='space.ship', string='Space Ship')
-   captain_id = fields.Many2one(comodel_name='res.partner', string='Crew Captain')
-   crew_ids = fields.Many2many(comodel_name='res.partner', string='Crew Members')
+   ship_id = fields.Many2one(comodel_name='space.ship',
+                             string='Space Ship',
+                             domain=('fuel_capacity', '>=', fuel_required)
+   )
+   captain_id = fields.Many2one(comodel_name='res.partner',
+                                string='Crew Captain'
+   )
+   crew_ids = fields.Many2many(comodel_name='res.partner',
+                               string='Crew Members'
+   )
+
+
