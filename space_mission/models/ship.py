@@ -11,7 +11,7 @@ class Ship(models.Model):
    alias = fields.Char(string='Alias', required=True)
    capacity = fields.Integer()
    
-   fuel = fields.Selection(string='Fuel Type', selection=[
+   fuel_type = fields.Selection(string='Fuel Type', selection=[
       ('electric', 'Electric'),
       ('hydrogen', 'Hydrogen'),
       ('fusion', 'Fusion'),

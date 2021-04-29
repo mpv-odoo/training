@@ -14,12 +14,12 @@
                         <field name="alias"/>
                      </group>
                      <group>
-                        <field name="fuel"/>
+                        <field name="fuel_type"/>
+                        <field name="fuel_capacity"/>
                         <field name="length"/>
                         <field name="width"/>
                         <field name="size" force_save="1"/>
                         <field name="capacity"/>
-                        <field name="alias"/>
                      </group>
                   </group>
                </sheet>
