@@ -26,10 +26,13 @@ class Mission(models.Model):
       string='Crew Captain'
    )
    crew_ids = fields.Many2many(
-      comodel_name='res.partner',
-      string='Crew Members'
+      string='Crew Members',
+      comodel_name='res.partner'
    )
-   crew_size = fields.Integer(compute='_calc_crew_size')
+   crew_size = fields.Integer(
+      string='Crew Size',
+      compute='_calc_crew_size'
+   )
    '''
       When fuel_required gets updated,
       update the domain rule for ship_id

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data noupdate="1">
+      <record model="space.ship" id="ship_enterprise">
+         <field name="model">Starship Enterprise</field>
+         <field name="capacity">100</field>
+         <field name="fuel_type">fusion</field>
+         <field name="max_range">100</field>
+         <field name="num_engines">2</field>
+         <field name="length">725</field>
+         <field name="width">300</field>
+      </record>
+   </data>
+</odoo>
