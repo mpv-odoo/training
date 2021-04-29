@@ -18,7 +18,7 @@ class Ship(models.Model):
       ('diesel', 'Diesel')
    ])
    fuel_capacity = fields.Float(string='Fuel Tank Capacity in Liters', required=True)
-   num_engines = fields.Int(string='Number of Engines', default=1)
+   num_engines = fields.Integer(string='Number of Engines', default=1)
 
 
    size = fields.Selection(string='Size', selection=[
