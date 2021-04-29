@@ -24,6 +24,6 @@
       <menuitem name="Space Mission" id="menu_space" sequence="1"/>
       <menuitem id="menu_space_sub" name="Odoo space" parent="menu_space" sequence="2"/>
       <menuitem id="menu_space_ships" name="Ships" parent="menu_space_sub" sequence="3" action="ships_list_action"/>
-      <menuitem id="menu_space_missions" name="Missions" parent="menu_space_sub" sequence="4" action="mission_list_action"/>
+      <menuitem id="menu_space_missions" name="Missions" parent="menu_space_sub" sequence="4" action="missions_list_action"/>
    </data>
 </odoo>
