@@ -62,12 +62,12 @@ class Mission(models.Model):
       ships that would be able to make
       the trip
    '''
-   @api.depends('crew_size')
-   def filter_ships_by_capacity(self):
-      for mission in self:
-         return {
-            'domain': {
-               'ship_id': [('capacity', '>=', mission.crew_size)]
-            }
-         }
+   # @api.depends('crew_size')
+   # def filter_ships_by_capacity(self):
+   #    for mission in self:
+   #       return {
+   #          'domain': {
+   #             'ship_id': [('capacity', '>=', mission.crew_size)]
+   #          }
+   #       }
    
