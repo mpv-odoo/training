@@ -20,7 +20,6 @@ class Mission(models.Model):
    ship_id = fields.Many2one(
       comodel_name='space.ship',
       string='Mission Space Ship',
-      domain=[('fuel_capacity', '>=', fuel_required)]
    )
    captain_id = fields.Many2one(
       comodel_name='res.partner',
