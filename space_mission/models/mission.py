@@ -45,7 +45,7 @@ class Mission(models.Model):
          return {
             'domain': {
                'ship_id': [
-                  ('max_range', '>=', rec.distance_travelled)
+                  ('max_range', '>=', rec.travel_distance)
                ]
             }
          }
