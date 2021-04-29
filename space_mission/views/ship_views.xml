@@ -30,7 +30,6 @@
          <field name="model">space.ship</field>
          <field name="arch" type="xml">
             <tree string="Spaceship List">
-               <field name="alias"/>
                <field name="model"/>
                <field name="capacity"/>
                <field name="active"/>
