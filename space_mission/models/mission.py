@@ -38,7 +38,7 @@ class Mission(models.Model):
       for rec in self:
          return {
             'domain': {
-               'fuel_required': [
+               'ship_id': [
                   ('fuel_capacity', '>=', rec.fuel_required)
                ]
             }
