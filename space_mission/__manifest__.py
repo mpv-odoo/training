@@ -19,5 +19,6 @@
         'views/mission_views.xml'
     ],
     'demo': [
+       'demo/ships_demo.xml'
     ],
 }
