@@ -14,8 +14,8 @@ class Mission(models.Model):
    description = fields.Text(
       string='Description'
    )
-   fuel_required = fields.Integer(
-      string='Fuel Required'
+   travel_distance = fields.Integer(
+      string='Distance to be traveled in the mission'
    )
    ship_id = fields.Many2one(
       comodel_name='space.ship',
@@ -34,18 +34,18 @@ class Mission(models.Model):
       compute='_calc_crew_size'
    )
    '''
-      When fuel_required gets updated,
+      When travel_distance gets updated,
       update the domain rule for ship_id
       to only show ships that would be 
       able to make the trip
    '''
    @api.onchange('fuel_required')
-   def filter_ships_by_fuel_cap(self):
+   def filter_ships_by_range(self):
       for rec in self:
          return {
             'domain': {
                'ship_id': [
-                  ('fuel_capacity', '>=', rec.fuel_required)
+                  ('max_range', '>=', rec.distance_travelled)
                ]
             }
          }
