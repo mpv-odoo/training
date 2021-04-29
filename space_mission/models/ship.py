@@ -7,16 +7,21 @@ class Ship(models.Model):
    _name='space.ship'
    _description='Space ship for space missions'
 
-   model = fields.Char(string='Model', required=True)
-   alias = fields.Char(string='Alias', required=True)
+   model = fields.Char(string='Model',
+                       required=True                    
+   )
+   alias = fields.Char(string='Alias',
+                       required=True
+   )
    capacity = fields.Integer()
    
-   fuel_type = fields.Selection(string='Fuel Type', selection=[
-      ('electric', 'Electric'),
-      ('hydrogen', 'Hydrogen'),
-      ('fusion', 'Fusion'),
-      ('diesel', 'Diesel')
-   ])
+   fuel_type = fields.Selection(string='Fuel Type', 
+                                selection=[
+                                 ('electric', 'Electric'),
+                                 ('hydrogen', 'Hydrogen'),
+                                 ('fusion', 'Fusion'),
+                                 ('diesel', 'Diesel')],
+   )
    fuel_capacity = fields.Float(string='Fuel Tank Capacity in Liters', required=True)
    num_engines = fields.Integer(string='Number of Engines', default=1)
 
