@@ -15,7 +15,7 @@ class Academy(http.Controller):
          'courses': courses
       })
 
-   @http.route('/academy/<model("academy.session"):session/', auth='public', website=True)
+   @http.route('/academy/<model("academy.session"):session>/', auth='public', website=True)
    def session(self, session):
       return http.request.rend('odoo_academy.session_website', {
          'session': session,
