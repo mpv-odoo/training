@@ -10,7 +10,7 @@
     'website': 'https://www.odoo.com',
     'category': 'Training',
     'version': '0.1',
-    'depends': ['base'],
+    'depends': ['base', 'project'],
     'data': [
         'security/space_security.xml',
         'security/ir.model.access.csv',
