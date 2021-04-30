@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 class Project(models.Model):
-   _inherit = 'project'
+   _inherit = 'project.project'
 
    test = fields.Char(
       string='Testing'
