@@ -2,3 +2,4 @@
 
 from . import ship
 from . import mission
+from . import project
