@@ -13,7 +13,7 @@
                <field name="instructor_id" attrs="{'invisible':[('session_id','=',False)]}"/>
             </field>
 
-            <xpath expre="//sheet//notebook" position="inside">
+            <xpath expr="//sheet//notebook" position="inside">
                <page string="Students" attrs="{'invisible':[('session_id','=',False)]}">
                   <field name="student_ids">
                      <tree>
